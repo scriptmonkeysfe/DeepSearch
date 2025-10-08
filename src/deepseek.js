@@ -41,7 +41,8 @@ const deepSeekPrompt = async (userPrompt, stage, response) => {
   - polish,
   - romanian,
   - ukrainian. 
-  Default to english if in doubt.`;
+  Default to english if in doubt.
+  RESPONSES HAVE TO BE FROM UK LAW AND REGULATIONS! THIS IS CRUCIAL!`;
   let ds;
 
   try {
