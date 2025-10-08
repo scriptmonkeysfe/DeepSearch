@@ -23,20 +23,20 @@ input.addEventListener('keypress', async (e) => {
 async function handleResponse(message) {
   updateThinkingMessage(systemMessage.search);
   
-  let search = await call('search', 3000, message);
+  let search = await call('search', message);
   updateThinkingMessage(systemMessage.analyze);
   
-  let analyze = await call('analyze', 3000, [message, search])
+  let analyze = await call('analyze', [message, search])
   updateThinkingMessage(systemMessage.final);
   
-  let final = await call('final', 3000, [message, analyze])
+  let final = await call('final', [message, analyze])
   currentThinkingMsg.remove();
   currentThinkingMsg = null;
 
   addMessage(final, 'bot');
 };
 
-const call = async (url, port, userInput) => {
+const call = async (url, userInput) => {
   if (!axiosClient) {
     const msg = 'axios is not available in the browser. Add a script tag for axios (https://unpkg.com/axios/dist/axios.min.js) in index.html';
     console.error(msg);
@@ -45,10 +45,11 @@ const call = async (url, port, userInput) => {
 
   try {
     const payload = typeof userInput === 'string' ? { message: userInput } : userInput;
+    const requestUrl = `/${url}`;
 
     const config = {
       method: 'post',
-      url: `http://localhost:${port}/${url}`,
+      url: requestUrl,
       headers: {
         'Content-Type': 'application/json',
       },
