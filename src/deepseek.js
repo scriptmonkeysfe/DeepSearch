@@ -49,17 +49,17 @@ const deepSeekPrompt = async (userPrompt, stage, response) => {
     if (stage === 1) {
       ds = await deepseek(
         "Provide ONLY relevant links for this query, no explanations. Procure as much possible but not more than 6. Favour official government sources over others.",
-        `${userPrompt} - PROVIDE LINKS ONLY, NO TEXT`
+        `UK: ${userPrompt} - PROVIDE LINKS ONLY, NO TEXT`
       );
     } else if (stage === 2) {
       ds = await deepseek(
         systemPrompt,
-        `Based on these sources: ${response}. Answer: ${userPrompt}.`
+        `Based on these sources: ${response}. Answer: UK: ${userPrompt}.`
       );
     } else {
       ds = await deepseek(
         systemPrompt,
-        `Polish this answer with better formatting: ${response}
+        `Polish this answer with better formatting: UK: ${response}
         Provide bullet points, links (all of them, but not more than 6 - THIS IS CRUCIAL!), and a summary.
         Result HAS TO BE IN HTML FORMAT FOR RENDERING PURPOSES. CRUCIAL!`
       );

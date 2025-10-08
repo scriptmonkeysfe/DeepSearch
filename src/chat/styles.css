@@ -221,7 +221,6 @@ img {
     }
     
     #messages {
-        height: calc(100vh - 8rem);
         width: 98%;
         padding: 0.25rem;
     }
