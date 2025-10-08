@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal AI Assistant</title>
+    <link rel="stylesheet" href="src/chat/styles.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="https://eerc.org.uk" target="_blank" rel="noopener noreferrer"
+          aria-label="Slavic Advice and Resource Center Homepage">
+          <img src="src/chat/logo.svg" alt="Legal AI Assistant Logo">
+        </a>
+        <div class="title">
+          Slavic Advice and Resource Center
+        </div>
+    </header>
+    <section aria-label="Chat with Legal AI Assistant">
+      <div id="messages" aria-label="Chat messages">
+        <div id="info" class="system info">
+          <strong>Legal AI Assistant</strong><br>
+          Hello! I'm your Immigration AI Assistant, here to help you with your legal questions.
+          <br>
+          <em>Ask me anything about UK immigration law.</em>
+          <br>
+          <!-- <div class="language-flags"></div> -->
+          <br><span class="flag">🇬🇧 I speak English</span>
+          <br><span class="flag">🇵🇱 Mówię po polsku</span>
+          <br><span class="flag">🇷🇴 Vorbesc română</span>
+          <br><span class="flag">🇺🇦 Я розмовляю українською</span>
+        </div>
+      </div>
+      <input id="input" placeholder="Ask about UK immigration law..." autofocus aria-autocomplete="none"
+        aria-label="Type your message here" aria-placeholder="Ask about UK immigration law..." />
+    </section>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="src/chat/index.js"></script>
+  </body>
+
+</html>

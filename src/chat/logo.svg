@@ -1,0 +1,55 @@
+<svg
+      width='140'
+      height='100'
+      viewBox="0 0 140 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="0"
+        y="0"
+        width="140"
+        height="100"
+        rx="4"
+        stroke="#1e40af"
+        strokeWidth="2"
+        fill="none"
+      />
+      
+      {/* Doorway/Path symbol - representing migration */}
+      <path
+        d="M 50 20 L 50 80 M 90 20 L 90 80 M 50 20 Q 70 15 90 20"
+        stroke="#1e40af"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      
+      {/* Abstract human figure moving through */}
+      <circle cx="70" cy="45" r="6" fill="#dc2626" />
+      <path
+        d="M 70 51 L 70 62 M 70 55 L 64 60 M 70 55 L 76 60 M 70 62 L 65 70 M 70 62 L 75 70"
+        stroke="#dc2626"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      
+      {/* Small UK accent - subtle cross element */}
+      <path
+        d="M 15 15 L 18 18 M 18 15 L 15 18"
+        stroke="#dc2626"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      
+      {/* Scale of justice element - minimalistic */}
+      <circle cx="115" cy="20" r="2" fill="#1e40af" />
+      <path
+        d="M 115 22 L 115 28 M 110 28 L 120 28"
+        stroke="#1e40af"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
